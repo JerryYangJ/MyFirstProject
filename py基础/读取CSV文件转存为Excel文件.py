@@ -5,6 +5,8 @@
 
 import pandas as pd
 
-data = pd.read_csv('D:\桌面\QMS报表需求\原料表样例202204071444.csv', encoding='GBK')
+data = pd.read_csv('py基础/csv.csv', encoding='utf-8')
 print(data.head())
-# writer = pd.ExcelWriter('D:\桌面\QMS报表需求\原料表样例202204071444.xlsx')
+writer = pd.ExcelWriter('py基础/csv.xlsx')
+# data.to_excel(writer, sheet_name="csv")
+# # writer.save()
