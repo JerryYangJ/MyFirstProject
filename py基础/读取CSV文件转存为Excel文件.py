@@ -8,5 +8,5 @@ import pandas as pd
 data = pd.read_csv('py基础/csv.csv', encoding='utf-8')
 print(data.head())
 writer = pd.ExcelWriter('py基础/csv.xlsx')
-# data.to_excel(writer, sheet_name="csv")
-# # writer.save()
+data.to_excel(writer, sheet_name="csv")
+# writer.save()
