@@ -14,4 +14,5 @@
 # 可以使用以下代码查看保留字    不同版本保留字可能不一样？
 import keyword
 print(keyword.kwlist)
+print("保留字总数为：",len(keyword.kwlist))
 

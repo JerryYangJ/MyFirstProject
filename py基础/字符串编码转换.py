@@ -10,7 +10,7 @@
                 encoding="utf-8":   可选参数，指定转码时采用的字符编码，默认为UTF-8. 简体中文为gb2312
                 errors=”strict“：    可选参数，指定错误处理方式。strict抛出异常、ignore忽略、replace用？替换、xmlcharrefreplace用XML的字符引用
         2.使用decode()方法解码：将使用encode()方法转换的结果再转换为字符串，即”解码“
-            bytes.recode([encoding = "utf-8"][,errors = "strict"]}
+            bytes.decode([encoding = "utf-8"][,errors = "strict"]}
                 bytes:要进行转换的二进制数据，通常是encode()方法转换的结果
                 encoding="utf-8":   可选参数，指定转码时采用的字符编码，默认为UTF-8. 简体中文为gb2312
                 errors=”strict“：    可选参数，指定错误处理方式。
