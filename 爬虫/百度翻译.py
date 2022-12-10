@@ -43,7 +43,7 @@ while True:
     '''
 
     # 方法二
-    with open(r'./baidufanyi.js', 'r', encoding="utf-8") as f:    # /baidufanyi.js表示js文件
+    with open(r'爬虫/baidufanyi.js', 'r', encoding="utf-8") as f:    # /baidufanyi.js表示js文件
         jscode = f.read()
     js_obj = execjs.compile(jscode)     # 编译js文件
     sign = js_obj.call('f', word)    # f表示你要调用的js函数,word表示你传的参数
