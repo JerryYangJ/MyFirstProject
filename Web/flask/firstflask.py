@@ -8,7 +8,7 @@ from flask import render_template
 app = Flask(__name__)
 
 
-@app.route("/index")
+@app.route("/index.html")
 @app.route("/")
 def index():
     return "哈哈哈，我是第一个flask页面，成功的道路开始了。。。。"
