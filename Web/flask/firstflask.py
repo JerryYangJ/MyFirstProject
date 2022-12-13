@@ -15,6 +15,14 @@ def index():
     with open("Web/flask/templates/index.html")as f:
         content = f.read()
         return content
+    
+    
+@app.route("/basic-table")
+def basic_table():
+    with open("Web/flask/templates/basic-table.html")as f:
+        content = f.read()
+        return content   
+
 
 @app.route("/profile")
 def profile():
