@@ -8,11 +8,13 @@ from flask import render_template
 app = Flask(__name__)
 
 
-@app.route("/index.html")
+@app.route("/index")
 @app.route("/")
 def index():
-    return "哈哈哈，我是第一个flask页面，成功的道路开始了。。。。"
-
+    # return "哈哈哈，我是第一个flask页面，成功的道路开始了。。。。"
+    with open("Web/flask/templates/index.html")as f:
+        content = f.read()
+        return content
 
 @app.route("/profile")
 def profile():
