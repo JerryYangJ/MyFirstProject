@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-<title>{{user_name}}的主页</title>
+<title>Home</title>
 <!-- Meta -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +31,7 @@
             <h1 class="name">{{user_name}}</h1>
             <div class="title">Full Stack Developer</div>
             <div class="profile">
-                <p>Profile info goes here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.</p>
+                <p>{{profile_info}}</p>
             </div><!--//profile-->
         </div><!--//container-->
     </div><!--//intro-->
@@ -53,7 +53,7 @@
     <section id="contact-section" class="contact-section section">
         <h2 class="section-title">Get in Touch</h2>
         <div class="intro">
-            <img class="profile-image" src="/static/images/{{user_name}}.png" alt="">
+            <img class="profile-image" src="{{ url_for('static', filename='/images/laowang.png') }}" alt="">
             <div class="dialog">
                 <p>I'm currently taking on freelance work. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
                 <p><strong>I can help with the following:</strong></p>
