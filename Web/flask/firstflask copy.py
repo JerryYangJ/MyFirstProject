@@ -5,18 +5,9 @@
 from flask import Flask, redirect, url_for, jsonify
 from flask import render_template
 
-from views.admin import admin_blu
-from views.index import index_blu
 
 app = Flask(__name__)
 
-# 注册蓝图
-#为了更好的区分出，前后台，url中一般添加前缀，这样有利于管理
-app.register_blueprint(admin_blu, url_prefix='/admin')
-app.register_blueprint(index_blu)
-
-
-'''
 
 @app.route("/index")
 @app.route("/")
@@ -122,8 +113,7 @@ def profile8(user_name, profile_info):
         return render_template("profile8.html", user_name=user_name, profile_info=profile_info)
     except:
         return f"对不起，没有找到'{user_name}'的信息"
-        
-'''
+
 
 app.run(debug=True)
 # app.run()
