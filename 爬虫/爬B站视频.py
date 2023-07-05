@@ -30,25 +30,25 @@ title = ''.join(title.split())
 # ltitle = tree.xpath('//*[@id="bilibili-player"]//ul[contains(@class,"eplist")]/li[contains(@class,"state-active")]/text()')
 # title = title.join(ltitle)
 print(title)
-# video_baseUrl_re = re.compile(r'"video":.*?baseUrl":"(.*?)",')
-# audio_baseUrl_re = re.compile(r'"audio":.*?":"(.*?)",')
-# video_baseUrl = video_baseUrl_re.findall(resp)
-# audio_baseUrl = audio_baseUrl_re.findall(resp)
-# # print(video_baseUrl[0])
-# # print(audio_baseUrl[0])
-# video = requests.get(url=video_baseUrl[0], headers=headers2)
-# audio = requests.get(url=audio_baseUrl[0], headers=headers2)
-# # print(video.status_code)
-# # print(audio.status_code)
-#
-#
-# with open(f'movie/{title}(视频).mp4', 'wb') as f:
-#     f.write(video.content)
-#
-# with open(f'movie/{title}(音频).mp3', 'wb') as f:
-#     f.write(audio.content)
-#
-# print(f'“{title}”下载完成')
+video_baseUrl_re = re.compile(r'"video":.*?baseUrl":"(.*?)",')
+audio_baseUrl_re = re.compile(r'"audio":.*?":"(.*?)",')
+video_baseUrl = video_baseUrl_re.findall(resp)
+audio_baseUrl = audio_baseUrl_re.findall(resp)
+# print(video_baseUrl[0])
+# print(audio_baseUrl[0])
+video = requests.get(url=video_baseUrl[0], headers=headers2)
+audio = requests.get(url=audio_baseUrl[0], headers=headers2)
+# print(video.status_code)
+# print(audio.status_code)
+
+
+with open(f'movie/{title}(视频).mp4', 'wb') as f:
+    f.write(video.content)
+
+with open(f'movie/{title}(音频).mp3', 'wb') as f:
+    f.write(audio.content)
+
+print(f'“{title}”下载完成')
 
 # 合并音视频
 # # 方法1(成功）：

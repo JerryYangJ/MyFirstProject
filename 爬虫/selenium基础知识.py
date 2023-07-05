@@ -6,6 +6,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 '''
+驱动器下载地址：(下载后放在虚拟环境python.exe平级目录内）
+chromedriver 下载网址：http://chromedriver.storage.googleapis.com/index.html
+IEdriver 下载地址：http://selenium-release.storage.googleapis.com/index.html
+
+
     selenium用于动态渲染页面爬取
     1.创建浏览器对象：
         web = Chrome()
@@ -71,11 +76,13 @@ try:
     web.get("http://www.baidu.com")
     input = web.find_element(By.ID, 'kw')
     input.send_keys('Python')
-    input.send_keys(Keys.ENTER)
+    # input.send_keys(Keys.ENTER)   # 使用enter键确认
+    btn = web.find_element(By.ID, "su")  # 使用button按钮确认
+    btn.click()
 
-    # 设置显式等待，10秒内如果id=‘content_left'节点加载出来，则返回这个节点，否则抛出异常
-    wait = WebDriverWait(web, 10)   # 显式等待
-    wait.until(EC.presence_of_element_located(By.ID, 'content_left'))
+    # # 设置显式等待，10秒内如果id=‘content_left'节点加载出来，则返回这个节点，否则抛出异常
+    # wait = WebDriverWait(web, 10)   # 显式等待
+    # wait.until(EC.presence_of_element_located(By.ID, 'content_left'))
 
 
 

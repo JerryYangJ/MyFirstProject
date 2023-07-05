@@ -31,12 +31,12 @@ base_url = [
 # 2.读取m3u8文件，提取下载链接。
 def down_m3u8(m3u8_num):
     n = 1
-    with open(f'./movie/m3u8/{m3u8_num}.m3u8', 'r') as f:
-        print(m3u8_num)
-        for line in f:
-            line = line.strip()
-            if not line.startswith("#"):
-                with ThreadPoolExecutor(50) as t:
+    with ThreadPoolExecutor(50) as t:
+        with open(f'./movie/m3u8/{m3u8_num}.m3u8', 'r') as f:
+            print(m3u8_num)
+            for line in f:
+                line = line.strip()
+                if not line.startswith("#"):
                     t.submit(down_ts, m3u8_num, line, n)
                     n += 1
 

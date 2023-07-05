@@ -8,6 +8,18 @@ import requests
 
 while True:
     word = input("请输入您要翻译的词语：")
+    from_to = input("请选择翻译方向：\n1.中——英；\n2.英——中\n")
+    from_to_select = {
+        1: ["zh", "en"],
+        2: ["en", "zh"]
+    }
+    # print(from_to_select.get(int(from_to)))
+
+    from_to_list = from_to_select.get(int(from_to))
+    from_word = from_to_list[0]
+    to_word = from_to_list[1]
+    # print(from_word, to_word)
+
     headers = {
         'Accept': '*/*',
         'Accept-Encoding': 'gzip, deflate, br',
@@ -43,15 +55,15 @@ while True:
     '''
 
     # 方法二
-    with open(r'爬虫/baidufanyi.js', 'r', encoding="utf-8") as f:    # /baidufanyi.js表示js文件
+    with open(r'./baidufanyi.js', 'r', encoding="utf-8") as f:  # /baidufanyi.js表示js文件
         jscode = f.read()
-    js_obj = execjs.compile(jscode)     # 编译js文件
-    sign = js_obj.call('f', word)    # f表示你要调用的js函数,word表示你传的参数
+    js_obj = execjs.compile(jscode)  # 编译js文件
+    sign = js_obj.call('f', word)  # f表示要调用的js函数名称（方法名称）,word表示传的参数
     print(sign)
 
     data = {
-        'from': 'zh',
-        'to': 'en',
+        'from': from_word,
+        'to': to_word,
         # 'from': 'en',
         # 'to': 'zh',
         'query': word,

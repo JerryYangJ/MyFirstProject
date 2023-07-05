@@ -2,6 +2,7 @@
 # @Author : Jerry Y
 # @File  : m3u8视频下载.py
 # @Info  :
+import os.path
 import re
 from concurrent.futures import ThreadPoolExecutor
 
@@ -52,11 +53,15 @@ if __name__ == '__main__':
             # print(ts_base)
             ts_base_list.append(ts_base)
 
-            # # 2.向m3u8页面地址发送请求，下载m3u8文件
-            # resp2 = requests.get(url=m3u8_rel_url, headers=headers)
-            # with open(f'./movie/m3u8/{i + 1}.m3u8', 'wb') as f:
-            #     f.write(resp2.content)
-            # resp2.close()
+            # 2.向m3u8页面地址发送请求，下载m3u8文件
+            resp2 = requests.get(url=m3u8_rel_url, headers=headers)
+            # 写文件前先判断文件路径是否存在，不存在则创建路径
+            save_path = f'/movie/m3u8'
+            if not os.path.exists(save_path):
+                os.mkdir(save_path)
+            with open(f'{save_path}/{i + 1}.m3u8', 'wb') as f:
+                f.write(resp2.content)
+            resp2.close()
 
             # 读取m3u8文件，下载ts
             with open(f'./movie/m3u8/{i + 1}.m3u8', 'r') as f1:

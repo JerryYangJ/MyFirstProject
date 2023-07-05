@@ -51,3 +51,5 @@ function f(t) {
 	(b ^= m) < 0 && (b = 2147483648 + (2147483647 & b)),
 	"".concat((b %= 1e6).toString(), ".").concat(b ^ f)
 }
+
+console.log(f("翻译"))

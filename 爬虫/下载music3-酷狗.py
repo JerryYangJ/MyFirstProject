@@ -1,3 +1,15 @@
+'''
+酷狗音乐搜索接口：http://mobilecdn.kugou.com/api/v3/search/song?format=json&keyword=%E7%8E%8B%E5%8A%9B%E5%AE%8F&page=1&pagesize=20&showtype=1
+    keyword：搜索的内容。
+    page：搜索的页数
+    pagesize：返回的数据量，填10就是返回1首歌曲的数据。
+第二个是歌曲详细接口：http://www.kugou.com/yy/index.php?r=play/getdata""&hash=你需要填的&album_id=你需要填的&_=1497972864535
+    hash和album_id都是第一个接口返回json解析出来的。
+    通过该接口，我们可以得到歌曲播放地址，图片地址，歌词等等
+'''
+
+
+
 import requests
 
 from selenium.webdriver import Chrome
