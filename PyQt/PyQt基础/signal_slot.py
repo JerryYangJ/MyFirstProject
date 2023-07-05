@@ -12,27 +12,27 @@ from PyQt5 import QtCore, QtWidgets, uic
 from PyQt5.QtWidgets import QApplication
 
 
-# class Ui_Form(object):
-#     def setupUi(self, Form):
-#         Form.setObjectName("Form")
-#         Form.resize(400, 300)
-#         self.dial = QtWidgets.QDial(Form)
-#         self.dial.setGeometry(QtCore.QRect(140, 30, 91, 91))
-#         self.dial.setWrapping(True)
-#         self.dial.setNotchesVisible(True)
-#         self.dial.setObjectName("dial")
-#         self.spinBox = QtWidgets.QSpinBox(Form)
-#         self.spinBox.setGeometry(QtCore.QRect(110, 180, 201, 22))
-#         self.spinBox.setObjectName("spinBox")
-#
-#         self.retranslateUi(Form)
-#         self.dial.valueChanged['int'].connect(self.spinBox.setValue)  # type: ignore
-#         self.spinBox.valueChanged['int'].connect(self.dial.setValue)  # type: ignore
-#         QtCore.QMetaObject.connectSlotsByName(Form)
-#
-#     def retranslateUi(self, Form):
-#         _translate = QtCore.QCoreApplication.translate
-#         Form.setWindowTitle(_translate("Form", "Form"))
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(400, 300)
+        self.dial = QtWidgets.QDial(Form)
+        self.dial.setGeometry(QtCore.QRect(140, 30, 91, 91))
+        self.dial.setWrapping(True)
+        self.dial.setNotchesVisible(True)
+        self.dial.setObjectName("dial")
+        self.spinBox = QtWidgets.QSpinBox(Form)
+        self.spinBox.setGeometry(QtCore.QRect(110, 180, 201, 22))
+        self.spinBox.setObjectName("spinBox")
+
+        self.retranslateUi(Form)
+        self.dial.valueChanged['int'].connect(self.spinBox.setValue)  # type: ignore
+        self.spinBox.valueChanged['int'].connect(self.dial.setValue)  # type: ignore
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
 
 
 if __name__ == '__main__':

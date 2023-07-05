@@ -38,6 +38,7 @@ class ColorDialog(QtWidgets.QWidget):
         if col.isValid():
             self.widget.setStyleSheet("QWidget{background-color:%s}" % col.name())
 
+
 app = QtWidgets.QApplication(sys.argv)
 colordialog = ColorDialog()
 colordialog.show()
