@@ -9,8 +9,7 @@
 import pyttsx3
 import openai
 
-openai.api_key = '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'  # openai api-keys : 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
-
+openai.api_key = '********************'  
 context = ''
 while True:
     ques = input("问：")
