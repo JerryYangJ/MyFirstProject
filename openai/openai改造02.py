@@ -8,7 +8,7 @@
 import pyttsx3
 import openai
 
-openai.api_key = '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'  # openai api-keys : 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
+openai.api_key = '************************8'
 
 ques = input("请输入你要问的问题：")
 response = openai.Completion.create(
