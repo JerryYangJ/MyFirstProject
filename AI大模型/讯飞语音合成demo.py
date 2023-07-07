@@ -143,8 +143,8 @@ def on_open(ws):
 
 if __name__ == "__main__":
     # 测试时候在此处正确填写相关信息即可运行
-    wsParam = Ws_Param(APPID='a6133b8a', APISecret='NjkxNmFjNjRmMjk3YTNmNWZiOGEzNTIy',
-                       APIKey='b34294de8386730314a3d4af33d4b4e7',
+    wsParam = Ws_Param(APPID='*******', APISecret='**************',
+                       APIKey='***************',
                        Text="这是一个语音合成示例")
     websocket.enableTrace(False)
     wsUrl = wsParam.create_url()
