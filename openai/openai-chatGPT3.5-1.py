@@ -12,7 +12,7 @@ import requests
 endpoint = 'https://api.openai.com/v1/engines/gpt-3.5-turbo/completions'
 
 # GPT-3.5 Turbo API Key
-api_key = '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'
+api_key = '*******************88'
 
 # Sample GPT-3.5 Turbo Prompt
 prompt = 'The meaning of life is '
