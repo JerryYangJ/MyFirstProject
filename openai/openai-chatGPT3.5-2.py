@@ -9,7 +9,7 @@ import openai
 
 
 url = 'https://api.gpt-3.5-turbo.com/v1'
-openai.api_key = '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'  # openai api-keys : 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
+openai.api_key = '*******************8'  
 
 resp = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
