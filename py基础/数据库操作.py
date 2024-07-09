@@ -34,7 +34,7 @@ import cx_Oracle
 # 使用cx_Oracle模块连接Oracle数据库
 def main1():
     # 建立连接
-    conn = cx_Oracle.connect('BISADMIN', 'BISADMIN', '192.168.14.37:1521/rftestdb')
+    conn = cx_Oracle.connect('BISADMIN123', 'BISADMIN123', '192.168.141.327:1521/rftestdb')
 
     # 创建游标
     cursor = conn.cursor()
